@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript"
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
+</script>
+		<script type="text/javascript" src="./js/index.js">
+</script>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		
+		<style>
+		
+            .pic1{background-image: url(image/1.jpg) }
+            .pic2{background-image:url(image/2.jpg) }
+            .pic3{background-image: url(image/3.jpg) }
+            .pic4{background-image: url(image/4.jpg) }		
+		
+		
+		
+ .tooltip {position: relative;}/*定义tooltip类的定位类型为相对*/  
+
+ a.tooltip span {display: none;}/*定义tooptip类链接对象元素span显示为不显示*/  
+
+ a.tooltip:hover span {    /*定义鼠标放在链接元素上的显示*/  
+
+  display: block;         /*显示块状*/  
+
+  position: absolute;    /*显示定位类型为绝对*/  
+
+  top:-0.2em; /*距离顶部1em*/  
+
+  left:-10.4em;/*距离左边距离2em*/  
+
+ font-family:verdana;  
+
+  font-weight: normal;  
+
+  color: #FFFFFF;  
+
+  background-color: #000000;  
+
+  text-decoration: none;  
+
+  height: 142px;  
+
+  width: 142px;  
+
+  border: 1px solid #cccccc;  
+
+  font-size: 14px;  
+
+ }  
+
+ a.tooltip:hover{/*这段就是奇怪的代码咯：设置鼠标放在链接上显示文字大小为100%*/  
+
+ font-size: 130%;  
+
+ }  		
+		
+		
+		
+#home,#foot {
+	background-color: #009900;
+}
+
+#wrapper {
+	margin: 20px auto;
+}
+
+#top,#grid,#bottom,#foot,#slideshow IMG {
+	width: 1010px;
+	margin-left: 125px;
+	margin-top: 70px;
+}
+
+#slideshow {
+	position: relative;
+}
+
+#slideshow IMG {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0.0;
+	height: 434px;
+}
+
+#slideshow IMG.active {
+	z-index: 2;
+	opacity: 1.0;
+}
+
+#slideshow IMG.last-active {
+	z-index: 1;
+}
+
+#grid {
+	position: relative;
+	z-index: 9;
+}
+
+#grid table {
+	border: #CCC 2px solid;
+}
+
+#grid table td {
+	border: #CCC 1px solid;
+}
+
+.cell {
+	width: 142px;
+	height: 142px;
+}
+
+.menu a {
+	text-align: right;
+	color: #fff200;
+	background-color: #0066cc;
+}
+
+.menu a {
+	height: 142px;
+	display: block;
+	font-weight: bold;
+}
+
+.nav a{
+	height: 142px;
+	display: block;
+	font-weight: bold;
+}
+
+#video,#photo,#design {
+	position: absolute;
+	width: 142px;
+	height: 142px;
+}
+
+#video {
+	right: 145px;
+	border-left: 2px solid #CCC
+}
+
+#photo {
+	bottom: 145px;
+	border-bottom: 2px solid #CCC
+}
+
+#design {
+	left: 435px;
+	border-right: 2px solid #CCC
+}
+
+#about a,#display a,#video a,#photo a,#design a,.menu a {
+	filter: alpha(opacity =                             80);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+#about a:hover,#display a:hover,#video a:hover,#photo a:hover #design a:hover,.menu a:hover
+	{
+	filter: alpha(opacity =                             100);
+	-moz-opacity: 1;
+	opacity: 1;
+}
+
+#about a,#video a:hover {
+	background-color: #fff200;
+	color: #181e20;
+}
+
+#about a:hover,#display a,.menu a:hover {
+	background-color: #181e20;
+	color: #fff200;
+}
+
+#video a {
+	background-color: #619c91;
+	color: #fff200;
+}
+
+#video a:hover {
+	background-color: #fff200;
+	color: #619c91;
+}
+
+#photo a,#design a:hover {
+	background-color: #0e2b3e; /*blue*/
+	color: #af1f0e; /*red*/
+}
+
+#photo a:hover,#design a {
+	background-color: #af1f0e; /*red*/
+	color: #0e2b3e; /*blue*/
+}
+
+#left {
+	background-color: #181d20;
+}
+
+#right {
+	background-color: #2b2b2b;
+}
+
+#left,#right,#news,#notice {
+	float: left;
+}
+
+#logo {
+	padding-right: 5px;
+}
+
+#logo img {
+	width: 415px;
+	height: 200px;
+}
+
+#news,#notice {
+	width: 356px;
+	height: 180px;
+	margin-top: 10px;
+	margin-right: 7px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	clear: none;
+	float: left;
+}
+
+.tag img {
+	width: 286px;
+	height: 32px;
+	margin-bottom: 5px;
+}
+
+.list {
+	list-style-type: none;
+	border: none;
+	padding: 0;
+	display: block;
+}
+
+.title ul li a {
+	font: 0.9em Microsoft YaHei, Apple LiGothic Medium;
+	line-height: 1.55em;
+	display: block;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	color: white;
+	width: 286px;
+	text-overflow: ellipsis;
+	white-space: nowrap; /* 不换行 */
+	overflow: hidden;
+}
+
+#news .title ul li {
+	border-bottom: 1px solid #fff200;
+}
+
+#notice .title ul li {
+	border-bottom: 1px solid #619c91;
+}
+
+#news .title ul li a:hover {
+	background-color: #555322;
+}
+
+#notice .title ul li a:hover {
+	background-color: #36423f;
+}
+
+#foot {
+	clear: both;
+	height: 0px;
+	font-size: 0.7em;
+	line-height: 1.5em;
+	color: #999;
+	padding-top: 0px;
+	background-color: #FFFFFF;
+}
+
+#design,#photo,#video,.us {
+	display: none;
+}
+
+.us {
+	position: absolute;
+	width: 424px;
+	height: 276px;
+	left: 433px;
+	background-color: #181e20;
+	color: #FFF;
+	font: 12px MicroSoft YaHei;
+	line-height: 170%;
+	padding: 5px;
+	z-index: 9;
+}
+
+.us p {
+	text-indent: 2em;
+}
+        </style>
+		<title>干祯超-泡泡龙</title>
+		
+		
+<script language="javaScript" type="text/javascript">
+           
+            var pos = 4;
+            function initArray() {
+                this.length = initArray.arguments.length;
+                for (var i = 0; i < this.length; i++) {
+                    this[i] = initArray.arguments[i];
+                }
+            }
+            var col = new initArray();
+            col[0] = "pic1";
+            col[1] = "pic2";
+            col[2] = "pic3";
+            col[3] = "pic4";
+            function chgpic() {
+                pos++;
+                if (pos < 0 || pos > 3) {
+                    pos = 0;
+                }
+                pid.className = col[pos];
+                setTimeout("chgpic()", 5000);
+            }
+        </script>		
+		
+		<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+		
+
+
+
+		
+	</head>
+	<body id="pid"    background-repeat:no-repeat;
+ onload="chgpic()">
+ 
+ <div id="txt"> </div>
+ 
+		<div id="wrapper">
+		  <div id="top">
+				<div id="slideshow">				</div>
+				<div id="grid">
+					<table cellspacing="0" cellpadding="0">
+						<tr>
+							<td>
+								<div class="cell"></div>							</td>	
+							
+							<td>
+								<div class="menu">
+									
+									<a href="paopaolong.html"><div style="height: 16px;"></div>作品展示&nbsp;&nbsp;</a>								</div>							</td>		
+							<td>
+								<div class="cell"></div>							</td>
+							<td>
+								<div class="cell"></div>							</td>
+							<td>
+								<div id="about" class="nav" >
+									
+									<div >
+									<a style="height: 140px;" href="#" class="tooltip">关于作者<span>· 干祯超，男，猴属性<br>
+
+· 上海交通大学软件学院软件工程专业大二学生<br> 
+
+· 生于浙江，就读于上海交大<br>
+
+· 版权所有，翻录必究</span></a>                                   </div>
+								</div>							</td>
+						</tr>
+						<tr>
+							<td>
+								
+									
+									<div style="height: 16px;"></div>												</td>		
+							
+							<td>
+								<div class="cell"></div>							</td>
+							<td>
+								<div class="cell"></div>
+								<!-- <div id="photo" class="nav">
+									<a href="#"><div style="height: 16px;"></div>&nbsp;&nbsp;图片社</a>
+								</div> -->							</td>
+							<td>
+								<div class="cell">								</div>							</td>
+							<td>
+								<div class="cell">								</div>							</td>
+						</tr>
+						<tr>
+						    <td>
+															
+									<div style="height: 16px;"><div>					</td>		
+							
+							<td>
+								<div class="cell"></div>
+								<!-- <div id="design" class="nav">
+									<a href="#"><div style="height: 16px;"></div>&nbsp;&nbsp;设计室</a>
+								</div> -->							</td>
+							<td>
+								<div class="cell"></div>							</td>
+							<td>
+								<div class="cell"></div>
+								<!-- 修改
+								<div id="video" class="nav">
+									<a href="#"><div style="height: 16px;"></div>&nbsp;&nbsp;制片厂</a>
+								</div> -->							</td>
+							<td>
+								<div class="menu">
+									
+									<a href="author.html"><div style="height: 16px;"></div>版权所有&nbsp;&nbsp;</a>								</div>							</td>		
+							<td>
+						</tr>
+					</table>
+				</div>
+			    <p>&nbsp; </p>
+	      </div>
+    </div>
+		<div id="foot">
+			  <div style="text-align: center">
+					地址:上海市闵行区东川路800号上海交通大学D03-303&nbsp;&nbsp;&nbsp;&nbsp; 邮编:200240			  </div>
+				<div style="text-align: center">2012-08-13.				&nbsp;&nbsp;<a href="mailto:303542123@qq.com">联系干祯超</a></div>
+	</div>
+		</div>
+	</body>
+</html>

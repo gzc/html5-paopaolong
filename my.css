@@ -1,0 +1,23 @@
+#a{
+	position:absolute;
+	top:50px;
+	border:none;
+	border-radius:20px;
+	-moz-border-radius:20px;
+	-o-border-radius:20px;
+	-webkit-border-radius:20px;
+	background-color:skyblue;
+	padding:20px;
+	width:220px;
+	background-image:url("image/form.jpg");
+}
+#b{
+	color:white;
+	font-size:20px;
+	fong-weight:bold;
+	text-shadow:3px,3px,5px red;
+}
+body{
+	background-image:url("image/bg.jpg");
+	background-repeat:no-repeat;
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>干祯超-泡泡龙 </title>
+<link rel="stylesheet" type="text/css" href="my.css">
+<script src="modernizr-1.6.min.js"></script>
+<script src="my.js"></script> 
+</head>
+<body>
+<div style="position: absolute; top: 50px; left: 300px;">
+<canvas id="canvasOne" width="500" height="600">
+ Your browser does not support HTML 5 Canvas. 
+</canvas>
+</div>
+<div style="position: absolute; top: 50px; left: 800px;">
+<canvas id="canvasTwo" width="400" height="600">
+ Your browser does not support HTML 5 Canvas. 
+</canvas>
+</div>
+<div id="a">
+<form id = "form1" name = "form1">
+<input type = "button" value = "accelerate" onclick = "upspeed();"/></br> 
+<input type = "button" value = "decelerate" onclick = "downspeed();"/></br> 
+<input type = "button" value = "play music" onclick = "playSound();"></br> 
+<input type = "button" value = "pause music" onclick = "pauseSound();"></br> 
+	<div id="b">change music:</div>
+	<!--建立下拉列表-->
+	<select name="musiclabel" id="musiclabel" onChange="changemusic();">
+		<option selected>Baa</option>
+		<option>Do You Ears Hang Low</option>
+		<option>We Wish You A Merry Christmas</option>
+		<option>kanong</option>
+		<option>coward</option>
+	</select>
+	<div id="b">change background:</div>
+	<!--建立下拉列表-->
+	<select name="backgroundlabel" id="backgroundlabel" onChange="changebackground();">
+		<option selected>bg1</option>
+		<option>bg2</option>
+		<option>bg3</option>
+		<option>bg4</option>
+		<option>bg5</option>
+	</select></br>
+	<input type = "button" value = "Use Laser" onclick = "uselaser();"></br>
+	<input type = "button" value = "return to main page" onclick = window.location.href="index.html";></br>
+</form>
+</div>
+<audio id="sound1" loop>
+  <source src = "music/Baa!Baa!Black Sheep.ogg" type=audio/ogg>
+  <source src = "music/Baa!Baa!Black Sheep.mp3" type="audio/mpeg">
+</audio>
+<audio id="sound2" loop>
+  <source src = "music/Do You Ears Hang Low.ogg" type=audio/ogg>
+  <source src = "music/Do You Ears Hang Low.mp3" type="audio/mpeg">
+</audio>
+<audio id="sound3" loop>
+  <source src = "music/We Wish You A Merry Christmas.ogg" type=audio/ogg>
+  <source src = "music/We Wish You A Merry Christmas.mp3" type="audio/mpeg">
+</audio>
+<audio id="sound4" loop>
+  <source src = "music/kanong.ogg" type=audio/ogg>
+  <source src = "music/kanong.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="sound5" loop>
+  <source src = "music/coward.ogg" type=audio/ogg>
+  <source src = "music/coward.mp3" type="audio/mpeg">
+<audio id="bomb">
+  <source src = "music/bomb.ogg" type=audio/ogg>
+  <source src = "music/bomb.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
